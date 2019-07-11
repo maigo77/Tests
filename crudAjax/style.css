@@ -65,7 +65,13 @@
   display: none;
   cursor: pointer;
 }
-.comment_box:hover .edit, .comment_box:hover .delete {
+.status{
+  position: absolute;
+  top:0;
+  left:220px;
+  display:none
+}
+.comment_box:hover .edit, .comment_box:hover .delete, .comment_box:hover .status {
   display: block;
 }
 .comment_text {

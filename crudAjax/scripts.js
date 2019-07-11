@@ -51,6 +51,7 @@ $(document).ready(function(){
   	$('#submit_btn').hide();
   	$('#update_btn').show();
   });
+  // Att comentário
   $(document).on('click', '#update_btn', function(){
   	var id = edit_id;
   	var name = $('#name').val();
@@ -73,4 +74,21 @@ $(document).ready(function(){
       }
   	});		
   });
+   // Att Status
+  $(document).on('click', '.status', function(){
+    var id = $(this).data('id');
+    var status = $('.status').val();
+    $.ajax({
+      url: 'server.php',
+      type: 'POST',
+      data:{
+        'id': id,
+        'updateStatus': 1,
+        'status': status,
+      },
+      success: function(response){
+        alert(response)
+      }
+    })
+  })
 });
