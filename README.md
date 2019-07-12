@@ -23,4 +23,4 @@ CRUD with Ajax and PHP database -
     comment text not null
   )
 
-The database connection are individual, so you have to change it to run correctly.
+The database connection is individual, so you have to change it to run correctly.
