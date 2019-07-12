@@ -4,50 +4,23 @@
         <meta charset="UTF-8" http-equiv="Content-type" content="text/html">
         <title>Formulário com Ajax e PHP</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <style>
-            span{
-                cursor:pointer;
-                color:blue
-            }
-
-            label{
-                display:block;
-            }
-            .window{
-                display:none;
-                width:200px;
-                height:300px;
-                position:absolute;
-                left:0;
-                top:0;
-                background:#FFF;
-                z-index:2;
-                padding:10px;
-                border-radius:10px;
-            }
-            #mascara{
-                display:none;
-                position:absolute;
-                left:0;
-                top:0;
-                z-index:1;
-                background-color:#000;
-            }
-            .fechar{display:block; text-align:right;}
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/a3361d289b.js"></script>
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <a href="#janela1" rel="modal">Clique aqui para cadastrar um novo usuário</a>
         <br><br>
         <div id="table">
             <h2>Usuários cadastrados</h2>
-            <table border="1px" cellpadding="5px" cellspacing="0">
+            <table class="table table-striped table-bordered table-condensed table-hover">
                 <tr>
                     <td>Id</td>
                     <td>Nome</td>
                     <td>Email</td>
                     <td>Status</td>
                     <td>Senha</td>
+                    <td>Ações</td>
                 </tr>
                 <?
                 include 'conexao.php';
@@ -63,11 +36,12 @@
                     $senha = $row['SENHA'];
 
                     echo "<tr>
-                    <td>$id <span class='excluir' id_registro='$id'>Excluir</span></td>
-                    <td>$nome <a href='#janela2' class='edita' id_registro='$id' rel='modal'>Editar</a></td>
-                    <td>$email <a href='#janela2' class='edita' id_registro='$id' rel='modal'>Editar</a></td>
-                    <td>$status <span class='status' status='$status' id_registro='$id'>Alterar</span></td>
-                    <td>$senha <a href='#janela2' class='edita' id_registro='$id' rel='modal'>Editar</a></td>
+                    <td>$id </td>
+                    <td>$nome</td>
+                    <td>$email</td>
+                    <td>$status</td>
+                    <td>$senha</td>
+                    <td><span class='excluir' id_registro='$id'>Excluir</span> | <a href='#janela2' class='edita' id_registro='$id' rel='modal'>Editar</a> | <span class='status' status='$status' id_registro='$id'>Alterar Status</span> </td>
 
                     </tr>";
                 }
@@ -77,7 +51,7 @@
 
 
             <div class="window" id="janela1">
-                <a href="#" class="fechar">X</a>
+                <i class="fa fa-window-close fechar" aria-hidden="true"></i>
                 <h4>Cadastro de Usuário</h4>
                 <form id="cadUsuario" action="" method="post">
                     <label>Nome:</label><input type="text" name="nome" id="nome">
@@ -89,7 +63,7 @@
             </div>
 
             <div class="window" id="janela2">
-                <a href="#" class="fechar">X</a>
+                <i class="fa fa-window-close fechar" aria-hidden="true"></i>
                 <h4>Editar Dados</h4>
                 <form id="edit" action="" method="post">
                     <label>Nome:</label><input type="text" name="nome" id="nome">
