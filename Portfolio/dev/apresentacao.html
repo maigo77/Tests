@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Apresentação do Portifólio</title>
+
+    <!-- Favicon -->
+	<link rel="icon" href="" sizes="32x32">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/apresentacao.css">
+
+	<!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <body onload='carregarBarra()' ondragstart='return false'>
+  	<header id="header-apresentacao">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<a href="index.html">
+				<i class="fas fa-rocket fa-3x navbar-brand"></i>
+			</a>
+			<div id="mapa-site" class="nav">
+				<ul>
+					<li>
+						<a href="#secao-01">Resumo</a>
+					</li>
+					<li>
+						<a href="#secao-02">Certificados</a>
+					</li>
+					<li>
+						<a href="#secao-03">Conhecimentos</a>
+					</li>
+					<li>
+						<a href="#secao-04">Projetos</a>
+					</li>
+					<li>
+						<a href="#secao-05">Contato</a>
+					</li> 
+				</ul>
+			</div>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="fonte('a')" id="aumentaFonte"> A+ </a>
+				</li>	
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="fonte('d')" id="diminuiFonte"> A- </a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="container-apresentacao">
+	    <section id="secao-01" class="secao">
+	    	<div class="div-pai">
+	    		<div class="conteudo textos">
+			    	<h1 class="display-5">Resumo</h1>
+
+					<p >
+						Suspendisse euismod neque semper mattis interdum. Aliquam leo enim, consequat sed sapien a, mollis ultrices leo. Nunc volutpat, sapien finibus porta tempus, est dui commodo ipsum, sed elementum lectus turpis ac tellus. Morbi eu turpis metus. Duis varius aliquam accumsan. Pellentesque at lacus erat. Donec ut scelerisque enim. Maecenas sed erat at neque feugiat suscipit eget laoreet urna. Nunc ac tempor purus. Curabitur commodo orci non vehicula porttitor. Donec leo massa, placerat eget magna sed, consectetur ultrices quam. Cras sollicitudin accumsan sapien non hendrerit.
+					</p>
+					<p>
+						Suspendisse euismod neque semper mattis interdum. Aliquam leo enim, consequat sed sapien a, mollis ultrices leo. Nunc volutpat, sapien finibus porta tempus, est dui commodo ipsum, sed elementum lectus turpis ac tellus. Morbi eu turpis metus. Duis varius aliquam accumsan. Pellentesque at lacus erat. Donec ut scelerisque enim. Maecenas sed erat at neque feugiat suscipit eget laoreet urna. Nunc ac tempor purus. Curabitur commodo orci non vehicula porttitor. Donec leo massa, placerat eget magna sed, consectetur ultrices quam. Cras sollicitudin accumsan sapien non hendrerit.
+					</p>
+				</div>
+			</div>
+	      <span class="icone-scroll botao">
+	        <span class="scroll-next scroll" onclick="voaFoguete()"></span>
+	       </span>
+	    
+	    </section>
+
+	    <section id="secao-02" class="secao">
+	    	<div class="div-pai textos">
+		    	<div id="listas" class="conteudo">
+		    		<h3 class="display-5 h3-certificados">Certificados: </h3>
+					<div id="lista-certificados">
+						<div class="lista-certificados">
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/html-e-css" target="_blank">HTML e CSS Básico</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/introducao-html-css" target="_blank">HTML e CSS Intermediário</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/avancando-html-css" target="_blank">HTML e CSS Avançado</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/posicione-elementos-com-flexbox" target="_blank">Flexbox</a>
+								</li>
+							</ul>
+						</div>
+						<div class="lista-certificados">
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/logica-programacao-javascript-html" target="_blank">JavaScript Básico</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/web-design-responsivo" target="_blank">Web Design Responsivo</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.alura.com.br/planos-cursos-online">
+										<img src="images/alura.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="https://cursos.alura.com.br/certificate/augustoso/fundamentos-http" target="_blank">Fundamentos HTTP</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://www.udemy.com/">
+										<img src="images/udemy.png">
+									</a>
+								</li>
+								<li>
+									<a href="#">Desenvolvimento Web Completo</a>
+								</li>
+							</ul>
+						</div>
+						<div class="lista-certificados">
+							<ul>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/site/">
+										<img src="images/diego-mariano.png">
+									</a>
+								</li>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/certificados/validar/?id=C82GPH" target="_blank">Introdução ao PHP Orientado a Objetos</a>
+								</li>							
+							</ul>
+							<ul>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/site/">
+										<img src="images/diego-mariano.png">
+									</a>
+								</li>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/certificados/validar/?id=W9OCEK" target="_blank">Criação de Página de Internet Dinâmicas com PHP</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/site/">
+										<img src="images/diego-mariano.png">
+									</a>
+								</li>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/certificados/validar/?id=YQZMG0" target="_blank">Boas Práticas em PHP</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/site/">
+										<img src="images/diego-mariano.png">
+									</a>
+								</li>
+								<li>
+									<a href="https://homepages.dcc.ufmg.br/~diego/certificados/validar/?id=TL4IJ1" target="_blank">Introdução ao banco de dados MySQL</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	      <span class="icone-scroll botao">
+	        <span class="scroll-next scroll"></span>
+	      </span>
+
+	    </section>
+
+	    <section id="secao-03" class="secao">
+
+	    	<div class="div-pai textos">
+		    
+		    	<div id="listas" class="conteudo">
+		    
+		    		<h3 class="display-5">Scripts e Linguagens de Programação: </h3>
+
+					<div class="lista-qualificacoes">
+						<!-- HTML -->
+						<div class="grupo">
+							<div class="img">
+								<img src="images/html5.png">
+							</div>
+							<div class="progress barra-progresso">
+							   	<progress class="bar progress" data-percentage="90" max="100"></progress>
+							</div>
+						</div>
+						<!-- CSS -->
+						<div class="grupo">
+							<div class="img2">
+								<img src="images/css3.png">
+							</div>
+							<div class="progress barra-progresso">
+							    <progress class="bar progress" data-percentage="90" max="100"></progress>
+							</div>
+						</div>
+						<!-- JS -->
+						<div class="grupo">
+							<div class="img2">
+								<img src="images/javascript.png">
+							</div>
+							<div class="progress barra-progresso">
+								<progress class="bar progress" data-percentage="80" max="100"></progress>
+							</div>
+						</div>
+						<!-- jQuery -->
+						<div class="grupo">
+							<div class=img>
+								<img src="images/jquery.png">
+							</div>
+							<div class="progress barra-progresso">
+							    <progress class="bar progress" data-percentage="80" max="100"></progress>
+							</div>
+						</div>
+						<!-- PHP -->
+						<div class="grupo">
+							<div class="img">
+								<img src="images/php7.png">
+							</div>
+							<div class="progress barra-progresso">
+							    <progress class="bar progress" data-percentage="80" max="100"></progress>
+							</div>
+						</div>
+						<!-- MySQL -->
+						<div class="grupo">
+							<div class="img">
+								<img src="images/mysql.png">
+							</div>
+							<div class="progress barra-progresso">
+								<progress class="bar progress" data-percentage="80" max="100"></progress>
+							</div>
+						</div>
+						<!-- Phyton -->
+						<div class="grupo">
+							<div class="img">
+								<img src="images/phyton.png">
+							</div>
+							<div class="progress barra-progresso">
+								<progress class="bar progress" data-percentage="70" max="100"></progress>
+							</div>
+						</div>
+						<!-- C -->
+						<div class="grupo">
+							<div class="img">
+								<img src="images/c.png">
+							</div>
+							<div class="progress barra-progresso">
+								<progress class="bar progress" data-percentage="70" max="100"></progress>
+							</div>
+						</div>
+
+						<h3 class="display-5">Softwares de Design: </h3>
+						<div class="lista-qualificacoes">
+							<!-- AI -->
+							<div class="grupo">
+								<div class="img">
+									<img src="images/illustrator.png">
+								</div>
+								<div class="progress barra-progresso">
+								    <progress class="bar progress" data-percentage="80" max="100"></progress>
+								</div>
+							</div>
+							<!-- PS -->
+							<div class="grupo">
+								<div class="img">
+									<img src="images/photoshop.png">
+								</div>
+								<div class="progress barra-progresso">
+								 	<progress class="bar progress" data-percentage="80" max="100"></progress>
+								</div>
+							</div>
+						</div>
+						<!-- 
+					
+					</div>
+					 -->
+
+				</div>
+			
+			</div>
+
+
+	      <span class="icone-scroll botao">
+	        <span class="scroll-next scroll"></span>
+	      </span>
+
+	    </section>
+
+	    <section id="secao-04" class="secao">
+			<div class="div-pai">
+
+	    		<div class="conteudo">
+	    			<h3>Aplicando conhecimentos:</h3>
+	    			
+
+	    		</div>
+
+	    	</div> 
+
+	    	<span class="icone-scroll botao">
+	        <span class="scroll-next scroll"></span>
+	      </span>
+	      
+	    </section>
+
+	    <section id="secao-05" class="secao">
+			<div class="div-pai">
+
+	    		<div class="conteudo">
+	    			Contato
+	    		</div>
+
+	    	</div> 
+	      
+	    </section>
+	    <div id="foguete" class="botao hidden">
+	    	<img src="images/foguete.png">
+	    </div>
+	</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="js/voa-foguete.js"></script>
+  <script src="js/carregar-barra.js"></script>
+  <script src="js/deslizar.js"></script>
+  <script src="js/no-drag.js"></script>
+  <script src="js/controle.js"></script>
+</html>

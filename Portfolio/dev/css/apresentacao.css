@@ -1,0 +1,205 @@
+    .secao {
+      position: relative;
+    }
+    #secao-01, #secao-02, #secao-03 {
+      background-color: transparent;
+    }
+
+    .icone-scroll {
+      position: absolute;
+      bottom: 3em;
+      width: 50px;
+      height: 50px;
+      background-color: #1a1a1a;
+      border-radius: 50%;
+      left: 50%;
+      margin-left: -25px;
+      cursor: pointer;
+    }
+    .scroll {
+      width: 15px;
+      height: 15px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      position: relative;
+    }
+    .scroll-next {
+      transform: rotate(45deg);
+      margin: 14px 0 0 16.5px;
+    }
+    .scroll-top {
+      transform: rotate(225deg);
+      margin: 19px 0 0 17px;
+    }
+
+    .scroll-down + .scroll-down {
+      top: -15px;
+      margin-top: 0;
+    }
+
+/*Header*/
+
+    #header-apresentacao{
+      position:fixed;
+      width:100%;
+      z-index:1;
+    }
+
+    #header-apresentacao #mapa-site{
+      margin:0 auto;
+    }
+
+    #mapa-site ul{
+      display:flex;
+      padding-top: 15px;
+      list-style-type: none;
+    }
+
+    #mapa-site ul li{
+      margin-right:30px;
+    }
+
+/*Centralizando conteúdos*/
+    
+    .div-pai{
+      padding-top:130px;
+      width:100%;
+    }
+
+    .conteudo{
+      width:60%;
+      margin:0 auto;
+    }
+
+    .conteudo h3{
+      color:white;
+    }
+
+/*Seção 01 - Textos*/
+.textos{
+  color:white;
+}
+
+/*Seção 02 - Certificados*/
+.h3-certificados{
+  margin-bottom:50px;
+}
+
+#lista-certificados{
+  display:flex;
+  justify-content:space-between;
+}
+
+#lista-certificados .lista-certificados ul{
+  list-style-type:none;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  margin-bottom:35px;
+}
+
+#lista-certificados .lista-certificados ul li a img{
+  opacity:0.8;
+  width:50px;
+  height:50px;
+  margin-right:15px;
+}
+
+#lista-certificados .lista-certificados ul li a img:hover{
+  opacity:1
+}
+
+
+/*Seção 03 - listas (barras de progresso) */
+
+    .grupo{
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      margin-bottom:40px
+    }
+
+    #listas{
+    	display:flex;
+    	flex-wrap: wrap;
+    	justify-content: center
+    }
+
+    #listas h3{
+      margin-bottom:30px;
+    }
+
+    .lista-qualificacoes{
+      margin-top: 35px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap: wrap
+    }
+
+    .grupo{
+      width:300px;
+      height:150px;
+    }
+
+    .grupo .img img{
+      width:100px;
+      height:100px;
+    }
+
+    .grupo .img2 img{
+      width:80px;
+      height:100px;
+      margin-right:20px;
+    }
+
+    /* .lista-qualificacoes ul{
+      list-style-type:none;
+      text-align:left
+    } */
+
+    /* .lista-qualificacoes ul li img{
+      width:100px;
+      height:100px;
+    } */
+
+    
+
+    /* .lista-central{
+      margin:20px 0 0 60px;
+      } */
+
+    .display-5{
+    	width:100%;
+    }
+
+    .barra-progresso{
+      transform: rotate(270deg);
+      width:125px;
+      margin-bottom:25px;
+    }
+
+
+/*Seção 04 - Projetos*/
+
+
+/*Foguete*/
+  .hidden{
+    display:none
+  }
+
+  .foguete{
+    width:90px;
+    height:150px;
+    position:fixed;
+    right:5%;
+    top:80%;
+  }
+
+  #foguete img{
+    width:90px;
+    height:150px;
+  }
+  .botao{
+   cursor:pointer;
+  }

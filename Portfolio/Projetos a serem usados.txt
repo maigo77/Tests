@@ -1,0 +1,44 @@
+Projeto Startup - C:\Users\augus\OneDrive\1 semestre\Magali\startups\projeto
+Tecnologias usadas: HTML, CSS e JS
+Objetivo - 
+
+Projeto Melhores Praias - C:\Users\augus\OneDrive\2 semestre\Prática de Design\Projeto Melhores Praias 2
+Tecnologias usadas: HTML, CSS e JS
+Objetivo - 
+
+Projeto Spotify - C:\Users\augus\OneDrive\Cursos Udemy\web 2.0\projeto-inicial-spotify
+Tecnologias usadas: HTML, CSS (Bootstrap) e JS
+Objetivo -
+
+App Mata Mosquito - C:\Users\augus\OneDrive\Cursos Udemy\web 2.0\javascript\app2
+Tecnologias usadas: HTML, CSS e JS
+Objetivo -
+
+Projeto Finans - C:\Users\augus\OneDrive\Cursos Udemy\web 2.0\finans
+Tecnologias usadas: HTML, CSS (Bootstrap) e JS
+Objetivo -
+
+App Orçamento Pessoal - C:\Users\augus\OneDrive\Cursos Udemy\web 2.0\ES6\app1
+Tecnologias usadas: HTML, CSS, JS(ES6)
+Objetivo -
+
+App Calculadora - C:\Users\augus\OneDrive\Cursos Udemy\web 2.0\calculadora_js
+Tecnologias usadas: HTML, CSS, JS
+Objetivo -
+
+App Dashboard - C:\xampp\htdocs\app_dashboard
+Tecnologias usadas: HTML, CSS, JS(jQuery e Ajax), MySQL, PHP
+Objetivo -
+
+App Help Desk - C:\xampp\htdocs\app_help_desk
+Tecnologias usadas: HTML, CSS(Bootstrap), PHP
+Objetivo -
+
+
+App Lista Tarefas - C:\xampp\htdocs\app_lista_tarefas_public
+Tecnologias usadas: HTML, CSS(Bootstrap), PHP, MySQL
+Objetivo - 
+
+App Send Mail - C:\xampp\htdocs\app_send_mail
+Tecnologias usadas: HTML, CSS(Bootstrap), PHP
+Objetivo -
