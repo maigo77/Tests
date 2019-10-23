@@ -1,4 +1,3 @@
-Both folders must have a database;
 App Lista Tarefas database -
   create table tb_status(
 	id int not null primary key auto_increment,
