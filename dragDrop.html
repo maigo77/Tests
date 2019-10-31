@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drag & Drop</title>
+  <style>
+    body{padding:0;margin:0;font-family:sans-serif;overflow-x:hidden}
+
+    table{min-height:200px;height:fit-content}
+    .invisibleTd{width:100%;height:100%}
+
+    #links{width:100%;display:flex;justify-content:center}
+    #links a{color:#00F;margin:0 10px}
+    #links a:visited{color:#00F}
+
+    .circle{width:100px;height:100px;border-radius:50%;background-color:#000;margin:15px}
+    
+    #zone{width:95%;min-height:200px;height:fit-content;border:1px dashed #F00;margin:15px auto;display:flex;justify-content:center}
+  </style>
+</head>
+<body>
+  <div id="container">
+
+    <div id="links">
+      <a href="https://jqueryui.com/draggable/" target="_blank">Draggable Documentation</a>
+      <a href="https://api.jqueryui.com/draggable/" target="_blank">Draggable API Documentation</a>
+      <a href="https://jqueryui.com/droppable/">Droppable Documentation</a>
+      <a href="https://api.jqueryui.com/droppable/">Droppable API Documentation</a>
+      <a href="https://pt.khanacademy.org/computer-programming/jquery-example-drag-and-drop/6362163139706880?utm_account=Grant&utm_campaignname=Grant_Science_Dynamic&gclid=EAIaIQobChMI1K-L9M_G5QIVCQmRCh2K_gIjEAAYASAAEgLfvPD_BwE">Khan Academy Example</a>
+      <a href="https://codepen.io/anon/pen/QgPWeb?editors=1010">Codepen Example</a>
+    </div>
+    
+    <table id="circleTable">
+      <tr>
+        <td data-id="1">
+          <div class="circle" data-id="1"></div>
+        </td>
+        <td data-id="2">
+          <div class="circle" data-id="2"></div>
+        </td>
+        <td data-id="3">
+          <div class="circle" data-id="3"></div>
+        </td>
+        <td data-id="4">
+          <div class="circle" data-id="4"></div>
+        </td>
+      </tr>
+      <tr>
+        <td data-id="5">
+          <div class="circle" data-id="5"></div>
+        </td>
+        <td data-id="6">
+          <div class="circle" data-id="6"></div>
+        </td>
+        <td data-id="7">
+          <div class="circle" data-id="7"></div>
+        </td>
+        <td data-id="8">
+          <div class="circle" data-id="8"></div>
+        </td>
+        <td class="invisibleTd">
+
+        </td>
+      </tr>
+    </table>
+  
+    <div id="zone">
+      
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+  // Tornando os círculos arrastáveis
+  $(".circle").draggable({
+    revert: function(event, ui){
+      var revertCircle = this.parent("#zone")
+      if(!revertCircle.length) {
+        var circleId = $(this).data("id")
+        var cellId = $(this).parent().data("id")
+
+        if(circleId !== cellId) {
+          var correctCell = $("#circleTable").find("td[data-id='" + circleId + "']");
+          correctCell.prepend(this)
+        }
+      }
+      return !event
+    }
+  })
+  // Ações para se o círculo for 'dropado' na região de 'drop' (div.dropZone)
+  $("#zone").droppable({
+    drop: function(event, ui){
+      $(ui.draggable).detach().css({top: 0, left: 0}).appendTo(this)
+    }
+  })
+  // Retornando os círculos para suas posições iniciais
+  $("#circleTable").droppable({
+    drop: function(event, ui){
+      $(ui.draggable).detach().css({top: 0, left: 0}).prependTo(this)
+    }
+  })
+</script>
+</html>
+
+<!-- Augusto Seabra -->
