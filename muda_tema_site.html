@@ -1,0 +1,259 @@
+<!--
+
+	Ideia para fazer no projeto de gamificação do dashboard
+	
+	Sobre a fc -> mudar classe dinamicamente
+	Criar menu que conterá definições de ajuste
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Função JS para mudar o tema de cores da página</title>
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/5747113857.js" crossorigin="anonymous"></script>
+</head>
+
+<style type="text/css">
+
+	*{margin: 0;padding: 0;font-family: monospace; transition-duration: .5s}
+
+	body{
+		overflow-x: hidden;
+	}
+
+	#container{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100vw;	
+		height: 100vh;
+	}
+
+	#cabecalho{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 25vw;
+		max-width: 480px;
+		height: 100%;
+	}
+
+	.cabecalho-titulo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 10vh;
+		max-height: 95px;
+		width: 100%;
+		color: #FFF;
+	}
+
+	#menu{
+		width: 100%
+	}
+
+	#menu > ul{
+		list-style-type: none;
+		height: 100%;
+	}
+
+	#menu > ul > li{
+		display: flex;
+		align-items: center;
+		height: 15vh;
+		max-height: 120px;
+		width: 100%;
+		border-bottom: 2px solid #222;
+		cursor: pointer;
+		color: #FFF;
+	}
+
+	#menu > ul > li:hover{
+		opacity: 0.7;
+		border-bottom: 2px solid #EEE;
+		text-decoration: underline
+	}
+
+	#app{
+		display: flex;
+		justify-content: center;
+		width: 65vw;
+	}
+
+	#container-caixas{
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+	}
+
+	.caixas{
+		margin: 15px;
+		color: #FFF;
+	}
+
+	.acessibilidade, #menu-opcoes{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 5vw;
+		max-width: 150px;
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+
+	#menu-opcoes{
+		top: 25px;
+		color: #FFF;
+		font-size: 30px;
+		cursor: pointer;
+		user-select: none;
+		padding: 15px;
+		width: auto;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px
+	}
+
+	.acessibilidade ul{
+		display: flex;
+		list-style-type: none;
+		margin: 15px auto;
+		color: #FFF;
+	}
+
+	#avatar{
+		color: #FFF;
+		border-radius: 50%;
+		width: 75px;
+		height: 75px;
+		position: fixed;
+		right: 15px;
+		bottom: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+	hr{
+		height: 3px;
+		border: none;
+		width: 100%;
+	}
+
+	.bg-dark{
+		background-color: #222;
+	}
+
+	.bg-light{
+		background-color: #EEE;
+	}
+
+	.hidden{
+		display: none
+	}
+
+	@keyframes expande-menu{
+		from{
+			height: auto;
+		}
+		to{
+			height: 100vh;
+			width: 15vw;
+			max-width: 300px;
+		}
+	}
+
+	.expande-menu{
+		animation-name: expande-menu;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+	}
+
+</style>
+
+<body>
+
+	<div id="container" class="bg-light">
+
+		<nav id="cabecalho" class="bg-dark">
+			<div class="cabecalho-titulo bg-dark">
+				<h1>Game</h1>
+				<hr class="bg-light">
+			</div>
+			<div id="menu" class="bg-dark">
+				<ul class="bg-dark">
+					<li class="bg-dark">Link</li>
+					<li class="bg-dark">Link</li>
+					<li class="bg-dark">Link</li>
+					<li class="bg-dark">Link</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="app" class="bg-light">
+			<div id="container-caixas">
+				<div class="caixas bg-dark">
+					<h3>Titulo Caixa</h3>
+					<hr class="bg-light">
+					<p>
+						Lorem ipsum dolor sit amet..
+					</p>
+				</div>
+				<div class="caixas bg-dark">
+					<h3>Titulo Caixa</h3>
+					<hr class="bg-light">
+					<p>
+						Lorem ipsum dolor sit amet..
+					</p>
+				</div>
+				<div class="caixas bg-dark">
+					<h3>Titulo Caixa</h3>
+					<hr class="bg-light">
+					<p>
+						Lorem ipsum dolor sit amet..
+					</p>
+				</div>
+				<div class="caixas bg-dark">
+					<h3>Titulo Caixa</h3>
+					<hr class="bg-light">
+					<p>
+						Lorem ipsum dolor sit amet..
+					</p>
+				</div>
+			</div>
+				
+		</div>
+
+
+		<div id="menu-opcoes" class="bg-dark">
+			<i class="fas fa-cog"></i>
+		</div>
+
+		<div class="acessibilidade bg-dark hidden"> <!-- v-if -->
+			<ul class="lista-acessibilidade">
+				<li>A+</li>
+				<li>|</li>
+				<li>a-</li>
+			</ul>	
+		</div>
+
+		<div id="avatar" class="bg-dark">
+			AVATAR
+		</div>
+
+	</div>
+	
+</body>
+
+<script type="text/javascript">
+	
+	let menuOpcoes = document.getElementById('menu-opcoes')
+	menuOpcoes.onclick = function(){
+		this.classList.add('expande-menu')
+	}
+
+</script>
+
+</html>
